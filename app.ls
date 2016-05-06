@@ -3,3 +3,7 @@ app = new Ractive do
     template: '#app'
     data:
         name: \mahmut
+        data:
+            \x
+            \y
+            \z

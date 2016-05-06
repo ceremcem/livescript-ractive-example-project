@@ -14,16 +14,14 @@
     <body>
         <h1>Ractive test</h1>
         <div id='container'></div>
-
         <script id='app' type='text/ractive'>
-        <p>Hello, {{name}}!</p>
+            <p>Hello, {{name}}!</p>
+
+            <h3>Data list: </h3>
+            {{#each data:i}}
+                <p>My data {{i}}: {{data[i]}}...</p>
+            {{/each}}
         </script>
-
-
-        <script>
-            var LiveScript = require("LiveScript");
-            LiveScript.go();
-        </script>
-
+        <script> require("LiveScript").go()</script>
     </body>
 </html>
