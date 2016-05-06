@@ -21,6 +21,18 @@
             {{#each data:i}}
                 <p>My data {{i}}: {{data[i]}}...</p>
             {{/each}}
+
+            <h3> KDS data </h3>
+            {{#each kds.Data:i}}
+            {{#with kds.Data[i]}}
+                <p>Raw material code is: {{.["RawMaterialCode"]}} </p>
+                <ul>
+                    {{#each .["Scores"]:j}}
+                    <li>Supplier code: {{.["SupplierCode"]}}</li>
+                    {{/each}}
+                </ul>
+            {{/with}}
+            {{/each}}
         </script>
         <script> require("LiveScript").go()</script>
     </body>
