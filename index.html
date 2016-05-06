@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang='en-GB'>
+    <head>
+        <meta charset='utf-8'>
+        <title>Ractive test</title>
+        <script src="ractive.js"></script>
+        <script src="livescript.js"></script>
+        <script src="prelude-browser-min.js"></script>
+        <script type="text/ls" src="app.ls"></script>
+        <script src="jquery-1.12.0.min.js"></script>
+
+    </head>
+
+    <body>
+        <h1>Ractive test</h1>
+        <div id='container'></div>
+
+        <script id='app' type='text/ractive'>
+        <p>Hello, {{name}}!</p>
+        </script>
+
+
+        <script>
+            var LiveScript = require("LiveScript");
+            LiveScript.go();
+        </script>
+
+    </body>
+</html>
